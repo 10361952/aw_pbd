@@ -81,7 +81,7 @@ square(8)
 
 cube(4)
 
-c_sin(30)
+sin(30)
 
 factorial(0)
 factorial(6)
