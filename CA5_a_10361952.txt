@@ -102,9 +102,7 @@ if(option == 'Y') {
   print ("Thank you")
 }
 
-#error - object 'Y' not found 
 
-#1st choice 
 
 if (option == 'Y' & operation == 'add') {
   result = add(num1, num2)
