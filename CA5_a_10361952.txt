@@ -3,7 +3,7 @@
 add <- function(x, y) {
   
   return(x + y)
-
+  
 }
 
 subtract <- function(x, y) {
@@ -25,9 +25,9 @@ divide <- function(x, y) {
 }
 
 exponent <- function (x,y){
-
+  
   return(x ** y)
-
+  
 }
 
 sqrt <- function (x){
@@ -48,18 +48,18 @@ cube <- function(x){
   
 }
 
-sin <- function(x) {
+c_sin <- function(x) {
   
-  return (math.sin(x))
+  return <- sin(x)
   
 }
 
 factorial <- function(n) {
-    if (n == 0) {
-        return(1)
-    } else {
-        return(n * factorial(n - 1))
-    }
+  if (n == 0) {
+    return(1)
+  } else {
+    return(n * factorial(n - 1))
+  }
 }
 
 
@@ -68,7 +68,7 @@ factorial <- function(n) {
 add(2,5)
 
 subtract(10,2)
- 
+
 multiply(10,3)
 
 divide(30,3)
@@ -81,7 +81,7 @@ square(8)
 
 cube(4)
 
-#sin(30)
+c_sin(30)
 
 factorial(0)
 factorial(6)
@@ -95,7 +95,7 @@ operation = readline(prompt="What would you like to do? Add, multiply, subtract 
 num1 <- as.integer(readline(prompt="Please enter the first number: "))
 
 option <- readline(prompt="Would you like to input second number? Y or N?")
-if(option == Y) {
+if(option == 'Y') {
   num2 = as.integer(readline(prompt="Please enter the second number: "))
   return (num2)
 } else {
@@ -106,32 +106,29 @@ if(option == Y) {
 
 #1st choice 
 
-if (option == Y & operation == add) {
+if (option == 'Y' & operation == 'add') {
   result = add(num1, num2)
-} else if( option == Y & operation == subtract) {
+} else if( option == 'Y' & operation == 'subtract') {
   result = subtract(num1, num2)
-} else if( option == Y & operation == multiply) {
+} else if( option == 'Y' & operation == 'multiply') {
   result = multiply(num1, num2)
-} else if( option == Y & operation == divide) {
+} else if( option == 'Y' & operation == 'divide') {
   divide(num1, num2)
-} else if( option == Y & operation == exponent) {
+} else if( option == 'Y' & operation == 'exponent') {
   result = exponent(num1, num2)
-} else if( option == N & operation == sqrt) {
+} else if( option == 'N' & operation == 'sqrt') {
   result = sqrt(num1)
-} else if( option == N & operation == square) {
+} else if( option == 'N' & operation == 'square') {
   result = square(num1)
-} else if( option == N & operation == cube) {
+} else if( option == 'N' & operation == 'cube') {
   result = cube(num1)
-#} else if( option == N & operation == sin) {
-#  sin(num1)
-} else if( option == N & operation == factorial) {
+} else if( option == 'N' & operation =='c_sin') {
+  result = c_sin(num1)
+} else if( option == 'N' & operation == 'factorial') {
   result = factorial(num1)
 } else {
   print("Please type a valid operator. Try again!")
 }
-  
-#2nd choice 
-#result <- switch(operation, add(num1, num2), subtract(num1, num2), multiply(num1, num2), divide(num1, num2),
-                 exponent(num1, num2), sqrt(num1), square(num1), Cube(num1), sin(num1), factorial(num1))
+
 
 print(result)
